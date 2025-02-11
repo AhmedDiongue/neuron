@@ -197,7 +197,6 @@ def MC_run(Iamp_run, Isig_run, nruns):
         axs (Axes): the Axes object on which the histogram is drawn
         histbins (tuple): the ENTIRE tuple output of the call to axs.hist()
     """
-    #### BEGIN SOLUTION #####
     spike_freqs = [] 
     #dictionary for neuron model
     p = {}
@@ -246,20 +245,17 @@ def MC_run(Iamp_run, Isig_run, nruns):
 
     # Return statistics and plot objects
     return ((spike_freq_min, spike_freq_max), spike_freq_mean, confidence_interval), fig, axs, histbins
-    #### END SOLUTION ####
 
 if __name__ == "__main__":
     pass
-    # Uncomment below what you would like to run
-
-    single_run(Iamp_run=0.556)
-    single_run(Iamp_run=0.556)
-    single_run(Iamp_run=3.300)
-    single_run(Iamp_run=3.301)
+    # Uncomment to to run
+    # single_run(Iamp_run=0.556)
+    # single_run(Iamp_run=0.556)
+    # single_run(Iamp_run=3.300)
+    # single_run(Iamp_run=3.301)
     #test_count_spikes()
     #test_Iconst_noise()
     MC_run(Iamp_run=3.300, Isig_run=0.1, nruns=100)
 
-
-    # Keep this line uncommented to display plots on your screen
+    # Display plots on your screen
     plt.show()
